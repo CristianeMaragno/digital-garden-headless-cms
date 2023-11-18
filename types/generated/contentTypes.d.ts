@@ -368,6 +368,7 @@ export interface ApiPostPost extends Schema.CollectionType {
     singularName: 'post';
     pluralName: 'posts';
     displayName: 'Post';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -381,6 +382,13 @@ export interface ApiPostPost extends Schema.CollectionType {
           preset: 'toolbarBaloon';
         }
       >;
+    name: Attribute.String;
+    date: Attribute.Date;
+    tag: Attribute.Enumeration<['project', 'reading', 'note']>;
+    home: Attribute.Boolean;
+    coverImage: Attribute.Media;
+    completed: Attribute.Boolean;
+    language: Attribute.Enumeration<['pt', 'eng']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

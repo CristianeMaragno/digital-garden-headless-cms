@@ -4,7 +4,8 @@
   "info": {
     "singularName": "post",
     "pluralName": "posts",
-    "displayName": "Post"
+    "displayName": "Post",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,6 +21,40 @@
         "preset": "toolbarBaloon"
       },
       "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "name": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "tag": {
+      "type": "enumeration",
+      "enum": [
+        "project",
+        "reading",
+        "note"
+      ]
+    },
+    "home": {
+      "type": "boolean"
+    },
+    "coverImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "completed": {
+      "type": "boolean"
+    },
+    "language": {
+      "type": "enumeration",
+      "enum": [
+        "pt",
+        "eng"
+      ]
     }
   }
 }
